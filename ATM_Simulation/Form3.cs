@@ -28,7 +28,7 @@ namespace Bankamatik_Simülasyonu
         private void Form3_Load(object sender, EventArgs e)
         {
             connection.Open();
-            SqlCommand command = new SqlCommand("Select Name+' '+Surname,ID_Number,Telephone_Number,Bakiye from Account where Account_Number=" + account_number, connection);
+            SqlCommand command = new SqlCommand("Select Name+' '+Surname,ID_Number,Telephone_Number,Budget from Account where Account_Number=" + account_number, connection);
             SqlDataReader dr = command.ExecuteReader();
             while(dr.Read())
             {
